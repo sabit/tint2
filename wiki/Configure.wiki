@@ -101,7 +101,7 @@ Configuration marked as `SVN ONLY` are not yet supported and could change in the
   * `strut_policy = follow_size/minimum/none` : STRUTs are used by the window manager to decide the size of maximized windows. Should the 'maximized windows' follow tint2 size (follow_size) or use the minimum size (minimum), or use the screen size (none). `minimum` option is interresting when used with `autohide_height` parameter.
 
 
-= Launcher SVN Only =
+= Launcher (SVN Only) =
   * `launcher_icon_theme = name_of_theme` tint2 will follow the theme of your desktop when you have an XSETTINGS manager running. Otherwise, `launcher_icon_theme` parameter is used.
   * `launcher_padding = horizontal_left_right_padding vertical_padding horizontal_spacing`
   * `launcher_background_id = integer` : Which background to use
@@ -190,6 +190,8 @@ Configuration marked as `SVN ONLY` are not yet supported and could change in the
   *  `systray_icon_size = max_icon_size`  : Set the maximum system tray icon size to `number`. Set to `0` for automatic icon size
 
   * `systray_icon_asb = alpha (0 to 100) saturation (-100 to 100) brightness (-100 to 100)` : adjust icon's color and transparency for system tray icons
+  * `systray_monitor = monitor (1, 2, ...)` Which monitor tint2 draws the systray on
+    * the first monitor is `1`
 
 = Clock ==
 
