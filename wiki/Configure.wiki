@@ -126,7 +126,7 @@ Please try to respect as much as possible the order of the options as given belo
 
   * `launcher_background_id = integer` : Defines which background to use.
 
-  * `launcher_icon_size = number` : Sets the launcher icon size to `number` pixels.
+  * `launcher_icon_size = integer` : The launcher icon size, in pixels.
 
   * `launcher_item_app = path_to_application` : Each launcher_item_app must be a full path to a .desktop file following the freedesktop.org [http://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html specification].
 
