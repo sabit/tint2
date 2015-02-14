@@ -107,6 +107,13 @@ Please try to respect as much as possible the order of the options as given belo
     * `minimum` means that the maximized windows always expand to have a common edge with the hidden panel. This is useful if the `autohide` option is enabled.
     * `none` means that the maximized windows use the full screen size.
 
+  * `autohide = boolean (0 or 1)` : Whether to enable panel hiding when the mouse cursor exists the panel.
+
+  * `autohide_show_timeout = float` : Show timeout in seconds after the mouse cursor enters the panel. Use '.' as decimal separator.
+
+  * `autohide_hide_timeout = float` : Hide timeout in seconds after the mouse cursor exits the panel. Use '.' as decimal separator.
+
+  * `autohide_height = integer` : panel height (width for vertical panels) in hidden mode.
 
 = Launcher (SVN Only) =
   * `launcher_icon_theme = name_of_theme` : Normally, tint2 will detect and use the icon theme of your desktop when you have an XSETTINGS manager running. Otherwise, the theme specified by this option is used.
@@ -122,92 +129,117 @@ Please try to respect as much as possible the order of the options as given belo
 
   * `taskbar_mode = single_desktop/multi_desktop`
     * `single_desktop` : Shows a normal taskbar listing the tasks running on the current virtual desktop (also known as 'workspace');
-    * `multi_desktop` : Pager like capability. Shows multiple taskbars, one per desktop, with which:
+    * `multi_desktop` : Pager like capability. Shows multiple taskbars, one per virtual desktop, with which:
       * You can drag-and-drop tasks between virtual desktops;
       * You can switch between virtual desktops.
   
-  * `taskbar_padding = horizontal_left_right_padding vertical_padding horizontal_spacing`
+  * `taskbar_padding = horizontal_padding vertical_padding spacing`
+
+    http://farm4.static.flickr.com/3521/3266303292_14d9b6b623.jpg
 
   * `taskbar_background_id = integer` : Which background to use
 
-  * `taskbar_active_background_id = integer` : Which background to use for current desktop.
+  * `taskbar_active_background_id = integer` : Which background to use for the taskbar of the current virtual desktop.
 
-  http://farm4.static.flickr.com/3521/3266303292_14d9b6b623.jpg
+  * `taskbar_name = boolean (0 or 1)` : (SVN ONLY) Whether to show the virtual desktop name in the taskbar.
 
-  * `taskbar_name = boolean (0 or 1)` :  SVN Only enabled(=1) or disabled(=0) desktop name in taskbar
+  * `taskbar_name_padding = padding` : (SVN ONLY) Padding for the virtual desktop name.
 
-  * `taskbar_name_padding = left_right_padding`  SVN Only
+  * `taskbar_name_background_id = integer` : (SVN ONLY) Which background to use for the desktop name.
 
-  * `taskbar_name_background_id = integer` : SVN Only Which background to use
+  * `taskbar_name_active_background_id = integer` : (SVN ONLY) Which background to use for the desktop name of the current desktop.
 
-  * `taskbar_name_active_background_id = integer` : SVN Only Which background to use for current desktop.
+  * `taskbar_name_font = [FAMILY-LIST] [STYLE-OPTIONS] [SIZE]` : (SVN ONLY) Font configuration for the desktop name.
 
-  * `taskbar_name_font = [FAMILY-LIST] [STYLE-OPTIONS] [SIZE]`  SVN Only
+  * `taskbar_name_font_color = color opacity (0 to 100)` : (SVN ONLY) (SVN ONLY) Font color for the desktop name.
 
-  * `taskbar_name_font_color = color opacity (0 to 100)`  SVN Only
-
-  * `taskbar_name_active_font_color = color opacity (0 to 100)`
+  * `taskbar_name_active_font_color = color opacity (0 to 100)` : (SVN ONLY) Font color for the current desktop name.
 
 = Task =
 
-  * `urgent_nb_of_blink = integer`               : Number of blink on 'get attention' event
+  * `urgent_nb_of_blink = integer` : Number of blinks on 'get attention' events.
 
-  * `task_icon = boolean (0 or 1)`               : Display task icon or not
+  * `task_icon = boolean (0 or 1)` : Whether to display the task icon.
 
-  * `task_text = boolean (0 or 1)`               : Display task text or not
+  * `task_text = boolean (0 or 1)` : Whether to display the task text.
 
-  * `task_centered = boolean (0 or 1)`           : Task name centered  or not
+  * `task_centered = boolean (0 or 1)` : Whether the task text is centered.
+
+  * `task_tooltip = boolean (0 or 1)` : Whether to show tooltips for tasks.
 
   * `task_maximum_size = width height`                 
-    * `width is used with horizontal panel. width = 0 to get full taskbar width`
-    * `height is used with vertical panel`
+    * `width` is used with horizontal panels to limit the size of the tasks. Use `width = 0` to get full taskbar width.
+    * `height` is used with vertical panels.
  
   * `task_padding = horizontal_padding vertical_padding`   
+
+    http://farm4.static.flickr.com/3086/3265475337_262799ded3.jpg
 
   * `task_font = [FAMILY-LIST] [STYLE-OPTIONS] [SIZE]`              
 
   * `task_font_color = color opacity (0 to 100)`
                                                        
-  * `task_icon_asb = alpha (0 to 100) saturation (-100 to 100) brightness (-100 to 100)` : adjust icon's color and transparency for task.
+  * `task_icon_asb = alpha (0 to 100) saturation (-100 to 100) brightness (-100 to 100)` : Adjust the task icon's color and transparency.
 
   * `task_background_id = integer` : Which background to use for non selected tasks
 
-  For the next 3 options STATUS can be `active` / `iconified`  / `urgent`.
+  For the next 3 options STATUS can be `active` / `iconified`  / `urgent`:
   * `task_STATUS_font_color = color opacity (0 to 100)` 
 
-  * `task_STATUS_icon_asb = alpha (0 to 100) saturation (-100 to 100) brightness (-100 to 100)` : adjust icon's color and transparency for active task
+  * `task_STATUS_icon_asb = alpha (0 to 100) saturation (-100 to 100) brightness (-100 to 100)` : Adjusts the task icon's color and transparency.
 
-  * `task_STATUS_background_id = integer` : Which background to use when task is selected
+  * `task_STATUS_background_id = integer` : Which background to use for the task.
 
-  * `task_tooltip = boolean (0 or 1)`               : enabled(=1) or disabled(=0) tooltip on task
+= Mouse actions for tasks =
 
-  http://farm4.static.flickr.com/3086/3265475337_262799ded3.jpg
+  The possible mouse events are: `left, middle, right, scroll_up, scroll_down`.
 
+  The possible mouse actions are: `none, close, toggle, iconify, shade, toggle_iconify, maximize_restore, desktop_left, desktop_right, next_task, prev_task`.
+
+  Use `mouse_event = action` to customize mouse actions. Example:
+  {{{
+  mouse_middle = none
+  mouse_right = close
+  mouse_scroll_up = toggle
+  mouse_scroll_down = iconify
+  }}}
+
+  The action semantics:
+  * `close` : close the task
+  * `toggle` : toggle the task
+  * `iconify` : iconify (minimize) the task
+  * `toggle_iconify` : toggle or iconify the task
+  * `maximize_restore` : maximized or minimized the task
+  * `desktop_left` : send the task to the desktop on the left
+  * `desktop_right` : send the task to the desktop on the right
+  * `next_task` : send the focus to next task
+  * `prev_task` : send the focus to previous task
+
+If a mouse action is set to `none` and `wm_menu = 1` is set, the mouse event is forwarded to the window manager.
 
 = System Tray ==
 
-  * `systray = boolean (0 or 1)` : enabled(=1) or disabled(=0) systray
+  * `systray = boolean (0 or 1)` : Whether to show the system tray.
 
-  * `systray_padding = horizontal_left_right_padding vertical_padding horizontal_spacing` 
+  * `systray_padding = horizontal_padding vertical_padding spacing` 
 
-  * `systray_background_id = integer` : Which background to use for non selected tasks
+  * `systray_background_id = integer` : Which background to use.
 
-  *  `systray_sort = ascending/descending/left2right/right2left` : Sorting order for icon's systray (if left2right or right2left the order can be different on restart)
+  * `systray_sort = ascending/descending/left2right/right2left` : Specifies the sorting order for the icons in the systray (note that with `left2right` or `right2left` the order can be different on panel restart).
 
-  *  `systray_icon_size = max_icon_size`  : Set the maximum system tray icon size to `number`. Set to `0` for automatic icon size
+  * `systray_icon_size = max_icon_size` : Set the maximum system tray icon size to `number`. Set to `0` for automatic icon sizing.
 
-  * `systray_icon_asb = alpha (0 to 100) saturation (-100 to 100) brightness (-100 to 100)` : adjust icon's color and transparency for system tray icons
-  * `systray_monitor = monitor (1, 2, ...)` Which monitor tint2 draws the systray on
-    * the first monitor is `1`
+  * `systray_icon_asb = alpha (0 to 100) saturation (-100 to 100) brightness (-100 to 100)` : Adjust the systray icons color and transparency.
+  * `systray_monitor = number (1, 2, ...)` : (SVN ONLY) Which monitor tint2 draws the systray on. The first monitor is `1`.
 
 = Clock ==
 
-  * `time1_format = %H:%M`
-    * time1_format, time2_format and clock_tooltip use 'strftime' syntax. more info on parameters on http://www.manpagez.com/man/3/strftime/
-    * comment time1_format and time2_format to hide clock
+  * `time1_format = %H:%M` : The format used by the first line of the clock.
+    * `time1_format`, `time2_format` and `clock_tooltip` use the 'strftime' syntax. More info can be found here: [http://www.manpagez.com/man/3/strftime/]
+    * To hide the clock, comment `time1_format` and `time2_format`.
   
   * `time1_timezone = :US/Hawaii`
-    * time1_timezone, time2_timezone and clock_tooltip_timezone can be used to specify a timezone. If you do not specify a value the system-wide timezone is used. The timezones can usually be found in /usr/share/zoneinfo. If your timezones are in a different directory, you need to specify the absolute path, i.e. time1_timezone = :/different/zoneinfo/dir/US/Hawaii (always prepend with a ':')
+    * `time1_timezone`, `time2_timezone` and `clock_tooltip_timezone` can be used to specify a timezone. If you do not specify a value the system-wide timezone is used. The timezones can usually be found in `/usr/share/zoneinfo`. If your timezones are in a different directory, you need to specify the absolute path, e.g. `time1_timezone = :/different/zoneinfo/dir/US/Hawaii` Always prepend the timezone with a ':'
 
   * `time1_font = [FAMILY-LIST] [STYLE-OPTIONS] [SIZE]`
 
@@ -223,23 +255,23 @@ Please try to respect as much as possible the order of the options as given belo
 
   * `clock_background_id = integer` : Which background to use
 
-  * `clock_tooltip = %a, %d. %b %Y : clock tooltip text`
+  * `clock_tooltip = %a, %d. %b %Y` : Format for the clock's tooltip.
 
   * `clock_tooltip_timezone = :UTC`
 
-  * `clock_lclick_command = text` : Which command to execute on left click
+  * `clock_lclick_command = text` : Command to execute on left click.
 
-  * `clock_rclick_command = text` : Which command to execute on right click
+  * `clock_rclick_command = text` : Command to execute on right click.
 
 = Tooltip =
 
   * `tooltip_padding = horizontal_padding vertical_padding`
 
-  * `tooltip_show_timeout = float` : delay to show tooltip in second. Use '.' as decimal separator.
+  * `tooltip_show_timeout = float` : Delay to show the tooltip in seconds. Use '.' as decimal separator.
 
-  * `tooltip_hide_timeout = float` : delay to close tooltip in second. Use '.' as decimal separator.
+  * `tooltip_hide_timeout = float` : Delay to hide the tooltip in seconds. Use '.' as decimal separator.
 
-  * `tooltip_background_id = integer` : Which background to use (in fake transparency the alpha channel and rounded are not respected)
+  * `tooltip_background_id = integer` : Which background to use for tooltips. Note that with fake transparency the alpha channel and corner radius options are not respected.
 
   * `tooltip_font_color = color opacity  (0 to 100)`
 
@@ -247,60 +279,23 @@ Please try to respect as much as possible the order of the options as given belo
 
 = Battery =
 
-  * `battery = boolean (0 or 1)`               : enabled(=1) or disabled(=0) battery applet
+  * `battery = boolean (0 or 1)` : Whether to enable the battery item.
 
-  * `battery_hide = never or an integer (0 to 100)`: At what battery percent does the battery hide
+  * `battery_hide = never/integer (0 to 100)` : At what battery percentage the battery item is hidden.
 
-  * `battery_low_status = integer`: At what battery percent does the icon show battery low command
+  * `battery_low_status = integer`: At what battery percentage the low command is executed.
 
-  * `battery_low_cmd = notify-send "battery low"` :What to do when battery is low
+  * `battery_low_cmd = notify-send "battery low"` : Command to execute when the battery is low.
 
   * `bat1_font = [FAMILY-LIST] [STYLE-OPTIONS] [SIZE]`
 
   * `bat2_font = [FAMILY-LIST] [STYLE-OPTIONS] [SIZE]`
 
-  * `battery_font_color = color opacity  (0 to 100)`
+  * `battery_font_color = color opacity (0 to 100)`
 
   * `battery_padding = horizontal_padding vertical_padding`
 
-  * `battery_background_id = integer` : Which background to use
-
-
-= Mouse action on task =
-
-  Customize mouse action with : `none, close, toggle, iconify, shade, toggle_iconify, maximize_restore, desktop_left, desktop_right, next_task, prev_task`.
-
-  Sample format:
-  {{{
-  mouse_middle = none
-  mouse_right = close
-  mouse_scroll_up = toggle
-  mouse_scroll_down = iconify
-  }}}
-
-  {{{
-  close : close the task
-  toggle : toggle the task
-  iconify : iconify the task
-  toggle_iconify : toggle or iconify the task
-  maximize_restore : maximized or minimized the task
-  desktop_left : send the task to the desktop on the left
-  desktop_right : send the task to the desktop on the right
-  next_task : send the focus to next task
-  prev_task : send the focus to previous task
-  }}}
-
-If a mouse action is set to `none` and `wm_menu = 1` is set, the mouse click is forwarded to the window manager
-
-= Panel autohide =
-
-  * `autohide = boolean (0 or 1)` : enable(=1) or disable(=0) autohiding
-
-  * `autohide_show_timeout = float` : show timeout in seconds. Use '.' as decimal separator.
-
-  * `autohide_hide_timeout = float` : hide timeout in seconds. Use '.' as decimal separator.
-
-  * `autohide_height = integer` : panel height (width for vertical panels) in hidden mode
+  * `battery_background_id = integer` : Which background to use for the battery.
 
 
 = An example tint2rc =
