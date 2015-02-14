@@ -3,7 +3,7 @@
 #sidebar TOCArticles
 <wiki:toc />
 
-The first time you run tint2, it will create the config file in `$HOME/.config/tint2/tint2rc` . (this is true if you have done a clean install. running tint2 in the source directory without doing 'make install' will not create the config file.)
+The first time you run tint2, it will create the config file in `$HOME/.config/tint2/tint2rc` (this is true if you have done a clean install. running tint2 in the source directory without doing 'make install' will not create the config file.)
 
 You can specify another file on the command line with -c option.
 eg. : `tint2 -c $HOME/tint2.conf`
