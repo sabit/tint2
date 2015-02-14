@@ -58,4 +58,4 @@ zip core.zip tint2
 
 You can provide us the core.zip file.
 
-*Important*: the core dump will contain the entire memory contents of tint2, including the titles of the windows shown in the taskbar. Please make sure no personal or sensitive information is contained before sending the core dump to anyone.
+*Important*: the core dump will contain the entire memory contents of tint2, including the titles of the windows shown in the taskbar and possibly a section of the desktop background below tint2. Please make sure no personal or sensitive information is contained before sending the core dump to anyone.
