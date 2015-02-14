@@ -107,6 +107,10 @@ Please try to respect as much as possible the order of the options as given belo
     * `minimum` means that the maximized windows always expand to have a common edge with the hidden panel. This is useful if the `autohide` option is enabled.
     * `none` means that the maximized windows use the full screen size.
 
+  * `panel_window_name = string` : (SVN ONLY) Defines the name of the panel's window. Default: 'tint2'.
+
+  * `disable_transparency = boolean (0 or 1)` : (SVN ONLY) Whether to disable transparency instead of detecting if it is supported. Useful on broken graphics stacks.
+
   * `autohide = boolean (0 or 1)` : Whether to enable panel hiding when the mouse cursor exists the panel.
 
   * `autohide_show_timeout = float` : Show timeout in seconds after the mouse cursor enters the panel. Use '.' as decimal separator.
