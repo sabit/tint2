@@ -1,4 +1,4 @@
-NOTE: tint2conf is still in development and not fully functional at the moment.
+*NOTE: tint2conf is still in development and not fully functional at the moment.*
 
 #summary How to use theme switcher
 #sidebar TOCArticles
