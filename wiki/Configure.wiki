@@ -121,11 +121,17 @@ Please try to respect as much as possible the order of the options as given belo
 
 = Launcher (SVN Only) =
   * `launcher_icon_theme = name_of_theme` : Normally, tint2 will detect and use the icon theme of your desktop when you have an XSETTINGS manager running. Otherwise, the theme specified by this option is used.
+
   * `launcher_padding = horizontal_padding vertical_padding spacing`
+
   * `launcher_background_id = integer` : Defines which background to use.
+
   * `launcher_icon_size = number` : Sets the launcher icon size to `number` pixels.
+
   * `launcher_item_app = path_to_application` : Each launcher_item_app must be a full path to a .desktop file following the freedesktop.org [http://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html specification].
+
   * `launcher_icon_asb = alpha (0 to 100) saturation (-100 to 100) brightness (-100 to 100)` : Adjusts the icon color and transparency.
+
   * `launcher_tooltip = boolean (0 or 1)` : Whether to show tooltips for the launcher icons.
 
 
@@ -152,6 +158,7 @@ Please try to respect as much as possible the order of the options as given belo
   * `taskbar_name_padding = padding` : (SVN ONLY) Padding for the virtual desktop name.
 
   * `taskbar_name_background_id = integer` : (SVN ONLY) Which background to use for the desktop name.
+
   * `taskbar_name_font = [FAMILY-LIST] [STYLE-OPTIONS] [SIZE]` : (SVN ONLY) Font configuration for the desktop name.
 
   * `taskbar_name_font_color = color opacity (0 to 100)` : (SVN ONLY) (SVN ONLY) Font color for the desktop name.
