@@ -129,7 +129,7 @@ Please try to respect as much as possible the order of the options as given belo
   * `launcher_tooltip = boolean (0 or 1)` : Whether to show tooltips for the launcher icons.
 
 
-= Taskbar (pager like capability) =
+= Taskbar / Pager =
 
   * `taskbar_mode = single_desktop/multi_desktop`
     * `single_desktop` : Shows a normal taskbar listing the tasks running on the current virtual desktop (also known as 'workspace');
