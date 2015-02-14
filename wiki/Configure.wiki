@@ -68,7 +68,7 @@ Please try to respect as much as possible the order of the options as given belo
     * `orientation` is one of: `horizontal`, `vertical`
   
   * `panel_size = width height`
-    * `width` and `height` can be specified without units (e.g. `123`) to mean pixels, or with `%` signs as percentages of the monitor size (e.g. `50%`). Use `100%` for full monitor width.
+    * `width` and `height` can be specified without units (e.g. `123`) to mean pixels, or with `%` signs to mean percentages of the monitor size (e.g. `50%`). Use `100%` for full monitor width.
     
       Example:
       {{{
