@@ -1,5 +1,5 @@
   * [Welcome ↑ Home]
     * [Install Installing Tint2]
-    * [Configure Configuring your tint2rc]
-    * [Tint2conf Using panel switcher]
+    * [Configure Configuring your tint2rc manually]
+    * [Tint2conf Configuring your tint2rc with tint2conf]
     * [FAQ Frequently Asked Questions]
