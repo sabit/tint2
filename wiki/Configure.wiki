@@ -14,9 +14,9 @@ All the configuration options supported in the config file are listed below. Ple
 
 Please try to respect as much as possible the order of the options as given below, as some are affected by it.
 
-= Background and border =
+= Backgrounds and borders =
 
-  The tint2rc config file starts with the options defining background elements with borders:
+  The tint2 config file starts with the options defining background elements with borders:
         
   * `rounded = number_of_pixels` : the corner radius
 
