@@ -163,6 +163,8 @@ Please try to respect as much as possible the order of the options as given belo
 
 = Task =
 
+The following options configure the task buttons in the taskbar:
+
   * `urgent_nb_of_blink = integer` : Number of blinks on 'get attention' events.
 
   * `task_icon = boolean (0 or 1)` : Whether to display the task icon.
