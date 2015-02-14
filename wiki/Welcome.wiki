@@ -4,7 +4,7 @@
 
 = What is tint2? =
 
-tint2 is a simple _*panel/taskbar*_ made for modern X window managers. It was specifically made for _*openbox3*_ but should also work with other window managers (GNOME, KDE, XFCE etc...). It is based on ttm http://code.google.com/p/ttm/
+tint2 is a simple _*panel/taskbar*_ made for modern X window managers. It was specifically made for _*openbox3*_ but should also work with other window managers (GNOME, KDE, XFCE etc.). It is based on ttm http://code.google.com/p/ttm/
 
 
 = Features =
