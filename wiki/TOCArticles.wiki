@@ -3,3 +3,4 @@
     * [Configure Configuring your tint2rc manually]
     * [Tint2conf Configuring your tint2rc with tint2conf]
     * [FAQ Frequently Asked Questions]
+    * [Debug Run tint2 in debug mode]
