@@ -90,6 +90,8 @@ Please try to respect as much as possible the order of the options as given belo
     
   * `panel_padding = horizontal_left_right_padding vertical_padding horizontal_spacing`
 
+  http://farm4.static.flickr.com/3425/3265475271_81e8ed56e0.jpg
+
   * `font_shadow = boolean (0 or 1)`
 
   * `panel_background_id = integer` : Which background to use
