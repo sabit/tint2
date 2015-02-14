@@ -245,7 +245,8 @@ If a mouse action is set to `none` and `wm_menu = 1` is set, the mouse event is 
   * `systray_icon_size = max_icon_size` : Set the maximum system tray icon size to `number`. Set to `0` for automatic icon sizing.
 
   * `systray_icon_asb = alpha (0 to 100) saturation (-100 to 100) brightness (-100 to 100)` : Adjust the systray icons color and transparency.
-  * `systray_monitor = number (1, 2, ...)` : (SVN ONLY) Which monitor tint2 draws the systray on. The first monitor is `1`.
+
+  * `systray_monitor = number (1, 2, ...)` : (SVN ONLY) On which monitor to draw the systray. The first monitor is `1`.
 
 = Clock ==
 
