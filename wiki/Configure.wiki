@@ -55,13 +55,21 @@ Please try to respect as much as possible the order of the options as given belo
   Identifier 0 refers to a special background which is fully transparent, identifer 1 applied the first background defined in the config file etc.  
 
 = Panel =
+
+  * `panel_items = LTSBC` (SVN ONLY) defines the items tint2 will show and the order of those items. Each letter refers to an item, defined as:
+    * `L` shows the Launcher
+    * `T` shows the Taskbar
+    * `S` shows the Systray (also called notification area)
+    * `B` shows the Battery status
+    * `C` shows the Clock
+    For example, panel_items = STC will show the systray, the taskbar and the clock (from left to right).
+
   * `panel_monitor = monitor (all, 1, 2, ...)` : Which monitor tint2 draws the panel on
     * The first monitor is `1`
     * Use `panel_monitor = all` to get a separate panel per monitor
   
   http://farm4.static.flickr.com/3425/3265475271_81e8ed56e0.jpg
 
-    
   * `panel_position = vertical_position horizontal_position orientation`
     * `vertical_position` is one of: `bottom`, `top`, `center`
     * `horizontal_position` is one of: `left`, `right`, `center`
@@ -75,14 +83,6 @@ Please try to respect as much as possible the order of the options as given belo
       # The panel's width is 94% the size of the monitor, the height is 30 pixels:
       panel_size = 94% 30
       }}}    
-
-  * `panel_items = LTSBC` (SVN ONLY) defines the items tint2 will show and the order of those items. Each letter refers to an item, defined as:
-    * `L` shows the Launcher
-    * `T` shows the Taskbar
-    * `S` shows the Systray (also called notification area)
-    * `B` shows the Battery status
-    * `C` shows the Clock
-    For example, panel_items = STC will show the systray, the taskbar and the clock (from left to right).
 
   * `panel_margin = horizontal_margin vertical_margin` : The margins define the distance between the panel and the horizontal/vertical monitor edge. Use `0` to obtain a panel with the same size as the edge of the monitor (no margin).
 
