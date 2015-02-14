@@ -5,55 +5,32 @@
 Frequently asked questions. Please add any extra tips to the comments.
 
 = What is tint2? =
-  * Tint2 is a panel/taskbar for modern x window managers like GNOME, KDE, XFCE, openbox, pekwm,etc..
+  * Tint2 is a panel/taskbar for modern X window managers like GNOME, KDE, XFCE, Openbox etc.
 
 = Who is the developer of tint2 ? =
-  * Main developers of tint2 are Thierry Lorthiois and Andreas Fink
+  * Main developers of tint2 are Thierry Lorthiois and Andreas Fink.
 
-= Does tint2 have a system tray/notification area? =
-  * YES! Tint2 finally has system tray/notification area. Please [Install install] the latest build if your current build doesn't have it.
-
-= I have the latest build of tint2 but still no system tray =
-  * Check your tint2rc to see if you have the systray option configured and the options are not commented out.
-  * The systray section looks like this 
-    {{{
-#---------------------------------------------
-# SYSTRAYBAR
-#---------------------------------------------
-systray = 1
-systray_padding = 0 3 3
-systray_background_id = 0
-systray_sort = left2right
-    }}}
-
-= tint2 doesn't show the systray/notification =
-  * Check your tint2rc to see if you have 'systray = 1'
-  * run tint2 in a terminal. if you get 'tint2 : another systray is running' it's because you have another systray/notification and you can't run more than one at a time. 
-    * In gnome, remove the systray/notification with a right clic on the separator before your systray/notification -> remove
+= tint2 does not show the systray/notification area =
+  * Check your tint2rc to see if you have the systray enabled (`systray = 1` in tint2 0.11 or 'S' in `panel_items` in SVN ONLY)
+  * Only one systray can run at a time. Run tint2 in a terminal. If you see 'tint2 : another systray is running', you have another systray running and tint2 cannot display its own. 
+    * Under Gnome 2, you can remove the Gnome systray with a right click on the separator before your systray in the panel -> remove.
 
 = Why did some systray icons disappear from the panel? =
-  * tint2 stops/restarts the systray protocol on some events (like switching theme with tint2conf). But some systray icons do not implement the stop/restart of the manager and so disappear from the panel. You can report the problem to us and also to the systray icon developer.
+  * tint2 stops/restarts the systray on some events (such as switching the theme, or changing monitor resolution). Some systray icons do not implement the stop/restart of the systray and so disappear from the panel. You should report the problem to us and also to the developers of the applications that misbehave.
 
 = Why don't some systray icons appear when you run tint2 in a KDE session? =
   * Some KDE applications use the KDE status notifier service to show system tray icons. If you disable this service (systemsettings -> Startup and Shutdown -> Service Manager -> uncheck "Status Notifier Manager") all the icons should appear normally in tint2.
 
 = I want to disable the tint2 systray =
-  * To disable the systray, just put `systray = 0` in your tint2rc
-  * Example:
-    {{{      
-systray = 0
-systray_padding = 0 3 3
-systray_background_id = 0
-     }}}
+  * To disable the systray, just use `systray = 0` in your tint2rc.
 
-= How to configure real transparency =
-  * tint2 autodetects your composite manager and uses real transparency when possible. However, xcompmgr have a little bug which prevents tint2 from detecting it. 
-  * If you want autodetect with xcompmgr, download and apply xcompmgr's patch (in bug report). See <a href="http://bugs.freedesktop.org/show_bug.cgi?id=26090">xcompmgr patch</a>
+= How to configure real transparency for xcompmgr =
+  * tint2 autodetects your compositing manager and uses real transparency when possible. However, xcompmgr has a bug which prevents tint2 from detecting it. 
+  * If you want transparency with xcompmgr, download and apply to xcompmgr the patch from this bug report: [http://bugs.freedesktop.org/show_bug.cgi?id=26090 xcompmgr patch]
 
-
-= Tint2 doesn't work on compiz correctly? =
+= Tint2 does not work on compiz correctly? =
   * All my tasks are on one desktop in compiz?
-    * This is a known issue in compiz. Compiz doesn't support 'Virtual desktop' specification (or you have to disabled visual effect).<br>I look like 'Desktop number' use Viewport instead of 'Virtual desktop'. So pager capabilities are not supported. <br>See https://bugs.launchpad.net/ubuntu/+source/compiz/+bug/153322 <br>or http://forum.compiz.org/viewtopic.php?f=86&t=11943 <br>or  https://bugs.launchpad.net/ubuntu/+source/compiz/+bug/150690 
+    * This is a known issue in compiz. Compiz does not support the 'virtual desktop' specification. In compiz, the 'desktop number' actually refers to a viewport instead of a 'virtual desktop'. So pager capabilities are not supported. See https://bugs.launchpad.net/ubuntu/+source/compiz/+bug/153322 or http://forum.compiz.org/viewtopic.php?f=86&t=11943 or  https://bugs.launchpad.net/ubuntu/+source/compiz/+bug/150690 
   * Tint is being decorated with a window/ has a shadow /is not fully transparent
     * Open CompizConfig Settings manager -> Window Decorations Plugin   
       * In the box for Decoration windows, put  `any & !type=dock`
