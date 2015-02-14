@@ -49,7 +49,7 @@ Copy this text and paste it in your bug report.
 
 = Obtaining a core dump =
 
-In the `(gdb)` prompt, run '`generate-core-file`'. A core.xxxxx file will be generated in the current directory. Exit gdb with the command '`q`'. Then compress the core dump and the tint2 executable like this:
+In the `(gdb)` prompt, run '`generate-core-file`'. A core.xxxxx file will be generated in the build directory. Exit gdb with the command '`q`'. Then compress the core dump and the tint2 executable like this:
 
 {{{
 zip core.zip core.*
