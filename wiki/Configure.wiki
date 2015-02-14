@@ -152,14 +152,13 @@ Please try to respect as much as possible the order of the options as given belo
   * `taskbar_name_padding = padding` : (SVN ONLY) Padding for the virtual desktop name.
 
   * `taskbar_name_background_id = integer` : (SVN ONLY) Which background to use for the desktop name.
-
-  * `taskbar_name_active_background_id = integer` : (SVN ONLY) Which background to use for the desktop name of the current desktop.
-
   * `taskbar_name_font = [FAMILY-LIST] [STYLE-OPTIONS] [SIZE]` : (SVN ONLY) Font configuration for the desktop name.
 
   * `taskbar_name_font_color = color opacity (0 to 100)` : (SVN ONLY) (SVN ONLY) Font color for the desktop name.
 
-  * `taskbar_name_active_font_color = color opacity (0 to 100)` : (SVN ONLY) Font color for the current desktop name.
+  * `taskbar_name_active_background_id = integer` : (SVN ONLY) Which background to use for the name of the current desktop.
+
+  * `taskbar_name_active_font_color = color opacity (0 to 100)` : (SVN ONLY) Font color for the name of the current desktop.
 
 = Task =
 
