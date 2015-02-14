@@ -136,6 +136,8 @@ Please try to respect as much as possible the order of the options as given belo
     * `multi_desktop` : Pager like capability. Shows multiple taskbars, one per virtual desktop, with which:
       * You can drag-and-drop tasks between virtual desktops;
       * You can switch between virtual desktops.
+
+  * `taskbar_distribute_size = boolean (0 or 1)` : (SVN ONLY) If enabled, in multi-desktop mode distributes between taskbars the available size proportionally to the number of tasks. Default: disabled.
   
   * `taskbar_padding = horizontal_padding vertical_padding spacing`
 
